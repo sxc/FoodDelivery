@@ -16,6 +16,7 @@ struct DetailView: View {
             DetailRow(food: food)
         }
         .navigationTitle(Text(categoryString(for: currentCategory)))
+        .listStyle(SidebarListStyle())
         .navigationBarTitleDisplayMode(.inline)
     }
 }
