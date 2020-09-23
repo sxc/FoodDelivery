@@ -24,3 +24,16 @@ func filterData(foodDataSet: [Food], by category: Categories) -> [Food] {
     }
     return filteredArray
 }
+
+func categoryString(for category: Categories) -> String {
+    switch category {
+    case .pizza:
+        return "Pizza"
+    case .burger:
+        return "Burger"
+    case .pasta:
+        return "Pasta"
+    case .desserts:
+        return "Desserts"
+    }
+}

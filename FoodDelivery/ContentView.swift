@@ -33,6 +33,7 @@ struct ContentView: View {
                         CategoryView(imageName: "desserts", categoryName: "DESSERTS")
                     })
             }
+            .navigationTitle("Food Delivery")
         }
     }
 }
