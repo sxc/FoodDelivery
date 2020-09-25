@@ -12,6 +12,7 @@
 		3414A61F251AE3C800E96C06 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3414A61E251AE3C800E96C06 /* FoodData.swift */; };
 		3414A622251AE40B00E96C06 /* DetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3414A621251AE40B00E96C06 /* DetailRow.swift */; };
 		3414A625251AEC0200E96C06 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3414A624251AEC0200E96C06 /* DetailView.swift */; };
+		34493A75251DBBA00054346D /* OrderForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34493A74251DBBA00054346D /* OrderForm.swift */; };
 		34CCE35D2519D2A3000CF97D /* FoodDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CCE35C2519D2A3000CF97D /* FoodDeliveryApp.swift */; };
 		34CCE35F2519D2A3000CF97D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CCE35E2519D2A3000CF97D /* ContentView.swift */; };
 		34CCE3612519D2A5000CF97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34CCE3602519D2A5000CF97D /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		3414A61E251AE3C800E96C06 /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		3414A621251AE40B00E96C06 /* DetailRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRow.swift; sourceTree = "<group>"; };
 		3414A624251AEC0200E96C06 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		34493A74251DBBA00054346D /* OrderForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderForm.swift; sourceTree = "<group>"; };
 		34CCE3592519D2A3000CF97D /* FoodDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34CCE35C2519D2A3000CF97D /* FoodDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryApp.swift; sourceTree = "<group>"; };
 		34CCE35E2519D2A3000CF97D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		34CCE35B2519D2A3000CF97D /* FoodDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				34493A74251DBBA00054346D /* OrderForm.swift */,
 				34CCE35C2519D2A3000CF97D /* FoodDeliveryApp.swift */,
 				34CCE35E2519D2A3000CF97D /* ContentView.swift */,
 				3414A618251AE0DF00E96C06 /* Food.swift */,
@@ -155,6 +158,7 @@
 			files = (
 				34CCE35F2519D2A3000CF97D /* ContentView.swift in Sources */,
 				34CCE35D2519D2A3000CF97D /* FoodDeliveryApp.swift in Sources */,
+				34493A75251DBBA00054346D /* OrderForm.swift in Sources */,
 				3414A619251AE0DF00E96C06 /* Food.swift in Sources */,
 				3414A625251AEC0200E96C06 /* DetailView.swift in Sources */,
 				3414A61F251AE3C800E96C06 /* FoodData.swift in Sources */,
