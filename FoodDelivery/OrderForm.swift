@@ -18,56 +18,65 @@ struct OrderForm: View {
     @State var city = ""
     @State var zip = ""
     @State var userFeedback = 0.0
-    
-    
+    @Binding var showOrderSheet: Bool
     
     var body: some View {
-        Form {
-            Section {
-                
-                Toggle(isOn: $specialRequests, label: {
-                    Text("Any special requests?")
-                })
-                .toggleStyle(SwitchToggleStyle(tint: .orange))
-                if specialRequests {
-                    TextField("Enter your request", text: $specialRequestInput)
+        NavigationView {
+            Form {
+                Section {
+                    
+                    Toggle(isOn: $specialRequests, label: {
+                        Text("Any special requests?")
+                    })
+                    .toggleStyle(SwitchToggleStyle(tint: .orange))
+                    if specialRequests {
+                        TextField("Enter your request", text: $specialRequestInput)
+                    }
+                    
+                    Stepper(value: $orderAmount, in: 1...10) {
+                        Text("Quantity: \(orderAmount)")
+                    }
                 }
                 
-                Stepper(value: $orderAmount, in: 1...10) {
-                    Text("Quantity: \(orderAmount)")
+                Section {
+                    TextField("First name", text: $firstName)
+                    TextField("Last name", text: $lastName)
+                    TextField("Street", text: $street)
+                    TextField("City", text: $city)
+                    TextField("ZIP code", text: $zip)
+                }
+                
+                Section {
+                    HStack {
+                        Image(systemName: "hand.thumbsdown")
+                        Slider(value: $userFeedback, in: 0.0...10.0)
+                            .accentColor(.orange)
+                        Image(systemName: "hand.thumbsup")
+                    }
+                }
+                
+                Section {
+                    Button(action: {
+                        print("Order placed.")
+                    }) {
+                        Text("Place Order")
+                    }
                 }
             }
-            
-            Section {
-                TextField("First name", text: $firstName)
-                TextField("Last name", text: $lastName)
-                TextField("Street", text: $street)
-                TextField("City", text: $city)
-                TextField("ZIP code", text: $zip)
-            }
-            
-            Section {
-                HStack {
-                    Image(systemName: "hand.thumbsdown")
-                    Slider(value: $userFeedback, in: 0.0...10.0)
-                        .accentColor(.orange)
-                    Image(systemName: "hand.thumbsup")
-                }
-            }
-            
-            Section {
-                Button(action: {
-                    print("Order placed.")
-                }) {
-                    Text("Place Order")
-                }
-            }
+            .navigationTitle("Your Order")
+            .navigationBarItems(leading:
+                                    Button(action: {
+                                        showOrderSheet = false
+                                    }) {
+                                        Text("Cancel")
+                                    }
+            )
         }
     }
 }
 
 struct OrderForm_Previews: PreviewProvider {
     static var previews: some View {
-        OrderForm()
+        OrderForm(showOrderSheet: .constant(false))
     }
 }
